@@ -38,44 +38,7 @@ namespace JobS
             using (var sw = new StreamWriter(client.GetStream()))
             {
                 sw.Write(jobName);
-            }
-
-            //var jobs = ConfigHelper.GetConfigVal("Jobs");
-            
-           
-            //foreach (var job in jobs)
-            //{
-
-            //    string JobCronTime =  job.Value; 
-            //    var schedule = CrontabSchedule.Parse(JobCronTime);
-            //    var nextExecution = schedule.GetNextOccurrence(DateTime.Now);
-            //    double nextExecutionSeconds = Math.Round(nextExecution.Subtract(DateTime.Now).TotalSeconds);
-
-            //    Console.WriteLine(nextExecutionSeconds); 
-
-            //    if (nextExecutionSeconds <= 20)
-            //    {
-            //        Thread.Sleep(Convert.ToInt32(nextExecutionSeconds)*1000);
-            //        while (true)
-            //        {
-            //            try
-            //            {
-            //                client = new TcpClient(IPAddress.Loopback.ToString(), 1337);
-            //                break;
-            //            }
-            //            catch (SocketException ex)
-            //            {
-            //                throw;
-            //            }
-            //        }
-            //        using (var sw = new StreamWriter(client.GetStream()))
-            //        {
-            //            sw.Write(job.Key);
-            //        }
-            //    }
-            //}
-
-       
+            }     
         }
     }
 }
